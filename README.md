@@ -84,22 +84,4 @@ HEURISTIC FLAGS
 SYN | large-packet | echo-request | sensitive-port
 ```
 
-Flags are transparent triage indicators, not intrusion-detection verdicts.
 
-## Engineering
-Run:
-```bash
-pytest -q
-ruff check .
-```
-GitHub Actions repeats the tests, generates the synthetic PCAP and runs the analyzer.
-
-## Resume
-**Advanced Network Packet Analyzer | Python, Scapy, TCP/IP, PCAP**
-> Built a Wireshark-inspired packet analyzer supporting TCP, UDP, HTTP, DNS and ICMP dissection; normalised packet metadata into structured records and implemented protocol/traffic analytics, endpoint conversation analysis, explainable traffic heuristics and CSV/JSON exports with automated testing and CI.
-
-## Interview pitch
-> I built a packet-analysis pipeline that starts with a PCAP or authorised interface, dissects protocol layers into a normalised PacketRecord, and then performs protocol, traffic and conversation analytics. I separated parsing from analytics so the system is testable and extensible, and added reproducible PCAP fixtures plus CI.
-
-## Responsible use
-Use only on networks and captures you are authorised to inspect. HTTPS payloads are not decrypted, and the project contains no exploitation, credential theft, packet injection or evasion functionality.
